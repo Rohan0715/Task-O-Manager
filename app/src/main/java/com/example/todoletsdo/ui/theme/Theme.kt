@@ -1,7 +1,6 @@
 package com.example.todoletsdo.ui.theme
 
 import android.app.Activity
-import android.graphics.fonts.Font
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -14,21 +13,14 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.core.view.WindowCompat
-import com.example.todoletsdo.R
+import com.example.todoletsdo.ui.theme.Colorse.Pink40
+import com.example.todoletsdo.ui.theme.Colorse.Pink80
+import com.example.todoletsdo.ui.theme.Colorse.Purple40
+import com.example.todoletsdo.ui.theme.Colorse.Purple80
+import com.example.todoletsdo.ui.theme.Colorse.PurpleGrey40
+import com.example.todoletsdo.ui.theme.Colorse.PurpleGrey80
 
-//val Nunito= FontFamily(
-//    listOf(
-//        Font(R.font.nunito_light, FontWeight.Light),
-//        Font(R.font.nunito_regular, FontWeight.Normal),
-//        Font(R.font.nunito_medium, FontWeight.Medium),
-//        Font(R.font.nunito_semibold, FontWeight.SemiBold),
-//        Font(R.font.nunito_bold, FontWeight.Bold),
-//        Font(R.font.nunito_extrabold, FontWeight.ExtraBold)
-//    )
-//)
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,

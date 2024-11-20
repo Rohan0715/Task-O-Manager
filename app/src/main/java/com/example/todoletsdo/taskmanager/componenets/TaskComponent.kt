@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -27,30 +26,35 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.todoletsdo.R
-import com.example.todoletsdo.ui.theme.Orange
-import com.example.todoletsdo.ui.theme.Pink80
-import com.example.todoletsdo.ui.theme.Purple80
-import com.example.todoletsdo.ui.theme.PurpleGrey80
-import com.example.todoletsdo.ui.theme.Task
-import com.example.todoletsdo.ui.theme.teal200
+import com.example.todoletsdo.ui.theme.Colorse.Cyan80
+import com.example.todoletsdo.ui.theme.Colorse.LightOrange
+import com.example.todoletsdo.ui.theme.Colorse.Orange
+import com.example.todoletsdo.ui.theme.Colorse.Pink80
+import com.example.todoletsdo.ui.theme.Colorse.Purple80
+import com.example.todoletsdo.ui.theme.Colorse.PurpleGrey80
+import com.example.todoletsdo.ui.theme.Colorse.teal200
+import com.example.todoletsdo.Task
 
 @Composable
 
-fun TaskComponent( task: Task) {
+fun TaskComponent(task: Task) {
 //Box(modifier = Modifier.fillMaxSize().background(Color(0x70F9F905)))
-    val taskColor= listOf(Purple80, PurpleGrey80,Pink80, Orange, teal200).random()
+    val taskColor= listOf(Purple80, PurpleGrey80,Pink80, Orange, teal200,
+        LightOrange, Cyan80).random()
     Column(modifier=Modifier.fillMaxSize()
         ) {
         Row(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(start = 6.dp, bottom = 20.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(18.dp)
+//            verticalAlignment = Alignment.CenterVertically,
+//            horizontalArrangement = Arrangement.spacedBy(30.dp)
+            // because of these two lines the two componenelt wasa perfrectlly alligned as i have removed it i know these component will be in differnt order
+
         )
         {
             Text(
-                text = "${task.startTime}",
+                text = task.startTime,
                 fontFamily = FontFamily(Font(R.font.nunitobold)),
                 textAlign = TextAlign.Center
             )
@@ -71,7 +75,7 @@ fun TaskComponent( task: Task) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Column(
-                        modifier = Modifier
+                        modifier = Modifier.fillMaxSize()
                             .width(700.dp).wrapContentHeight()
                             .clip(RoundedCornerShape(14.dp))
                             .background(taskColor)
@@ -80,10 +84,11 @@ fun TaskComponent( task: Task) {
 //                     Fully opaque (no transparency): If we want the color to be fully opaque, we add FF at the start. So, the color code becomes 0xFFFF5733.
 //                     50% transparent: If we want the color to be semi-transparent or 50% transparent, we can add 80 at the start. So, the color code becomes 0x80FF5733.
 //                     Fully transparent: If we want the color to be fully transparent, we add 00 at the start. So, the color code becomes 0x00FF5733. But, of course, a fully transparent color won’t be visible.
-                            .weight(0.9f), verticalArrangement = Arrangement.spacedBy(8.dp)
+                            .weight(0.9f), verticalArrangement = Arrangement.spacedBy(8.dp),
+                        horizontalAlignment = Alignment.End
                     ) {
                         Text(
-                            text = "${task.title}",
+                            text = task.title,
                             fontFamily = FontFamily(Font(R.font.nunitobold)),
                             modifier = Modifier
                                 .width(700.dp).wrapContentHeight()
@@ -134,13 +139,5 @@ fun TaskComponent( task: Task) {
                 }
             }
         }
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-
-        }
-
-
     }
 }

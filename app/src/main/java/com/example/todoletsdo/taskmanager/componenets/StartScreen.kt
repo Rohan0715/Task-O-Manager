@@ -42,12 +42,12 @@ fun StartScreen() {
             modifier = Modifier.height(75.dp),
             composition = composition1
         )
-        Spacer(modifier = Modifier.height(24.dp)) // Add space between animations and text
+        Spacer(modifier = Modifier.height(24.dp))
         Text(
             text = "WELCOME Z'SS",
             fontFamily = FontFamily(Font(R.font.nunitolight)),
-            fontSize = 24.sp, // Set the size of the text
-            modifier = Modifier.align(Alignment.CenterHorizontally) // Center the text horizontally
+            fontSize = 24.sp,
+            modifier = Modifier.align(Alignment.CenterHorizontally)
         )
     }
 }

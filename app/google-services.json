@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "840993790596",
+    "firebase_url": "https://todoletsdo-9f0e2-default-rtdb.firebaseio.com",
+    "project_id": "todoletsdo-9f0e2",
+    "storage_bucket": "todoletsdo-9f0e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840993790596:android:605e96225d6bb6394c80d1",
+        "android_client_info": {
+          "package_name": "com.example.todoletsdo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBruBoT6HrTxrNIirPGk5DMimbezLC_PBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
